@@ -11,9 +11,6 @@ This is a fan-made, independent project. It is **not affiliated with or endorsed
 
 ![Resonant Four editor](research/editor-preview.png)
 
-[![Small Clone Circuit Chorus pedal](research/small-clone-pedal.png)](https://github.com/nickdc8/small-clone-circuit-chorus)
-
-*Related project: [Small Clone Circuit Chorus](https://github.com/nickdc8/small-clone-circuit-chorus).*
 
 ## Using the plugin
 
