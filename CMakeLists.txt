@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.22)
+project(ResonantFour VERSION 0.1.0)
+set(JUCE_SOURCE_DIR "" CACHE PATH "Optional existing JUCE source checkout")
+if(JUCE_SOURCE_DIR)
+    add_subdirectory("${JUCE_SOURCE_DIR}" juce)
+else()
+    include(FetchContent)
+    FetchContent_Declare(JUCE GIT_REPOSITORY https://github.com/juce-framework/JUCE.git GIT_TAG 9.0.5 GIT_SHALLOW TRUE)
+    FetchContent_MakeAvailable(JUCE)
+endif()
+juce_add_plugin(ResonantFour
+    COMPANY_NAME "Independent Audio" BUNDLE_ID "audio.independent.resonantfour"
+    PLUGIN_MANUFACTURER_CODE IndA PLUGIN_CODE RsF4
+    PRODUCT_NAME "Resonant Four" DESCRIPTION "Vintage circuit-informed resonant modulation"
+    FORMATS VST3 Standalone VST3_CATEGORIES Fx Modulation
+    IS_SYNTH FALSE NEEDS_MIDI_INPUT FALSE NEEDS_MIDI_OUTPUT FALSE IS_MIDI_EFFECT FALSE
+    HAS_EDITOR TRUE COPY_PLUGIN_AFTER_BUILD FALSE)
+juce_generate_juce_header(ResonantFour)
+target_sources(ResonantFour PRIVATE Source/PluginProcessor.cpp Source/PluginProcessor.h Source/ResonantEngine.h)
+target_compile_features(ResonantFour PRIVATE cxx_std_17)
+target_compile_definitions(ResonantFour PUBLIC JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_VST3_CAN_REPLACE_VST2=0)
+target_link_libraries(ResonantFour PRIVATE juce::juce_audio_utils PUBLIC juce::juce_recommended_config_flags juce::juce_recommended_warning_flags)
+add_executable(engine_tests tests/EngineTests.cpp)
+target_compile_features(engine_tests PRIVATE cxx_std_17)
+enable_testing()
+add_test(NAME engine_tests COMMAND engine_tests)
+option(RESONANT_BUILD_HOST_CHECK "Build a local VST3 validation host" OFF)
+if(RESONANT_BUILD_HOST_CHECK)
+    juce_add_console_app(HostCheck PRODUCT_NAME "Resonant Four Host Check")
+    juce_generate_juce_header(HostCheck)
+    target_sources(HostCheck PRIVATE tests/HostCheck.cpp)
+    target_compile_features(HostCheck PRIVATE cxx_std_17)
+    target_compile_definitions(HostCheck PRIVATE JUCE_PLUGINHOST_VST3=1 JUCE_PLUGINHOST_AU=0 JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+    target_link_libraries(HostCheck PRIVATE juce::juce_audio_utils juce::juce_recommended_config_flags)
+endif()

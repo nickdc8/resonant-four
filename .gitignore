@@ -1,0 +1,4 @@
+build*/
+tests/engine-check
+.DS_Store
+research/*.log
