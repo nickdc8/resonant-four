@@ -11,6 +11,10 @@ This is a fan-made, independent project. It is **not affiliated with or endorsed
 
 ![Resonant Four editor](research/editor-preview.png)
 
+[![Small Clone Circuit Chorus pedal](research/small-clone-pedal.png)](https://github.com/nickdc8/small-clone-circuit-chorus)
+
+*Related project: [Small Clone Circuit Chorus](https://github.com/nickdc8/small-clone-circuit-chorus).*
+
 ## Using the plugin
 
 Load **Resonant Four** as an audio effect in your DAW. Start with output at -6 dB. Select a song preset from the editor's menu; “Reload preset” discards parameter edits and returns to the named starting point. The menu shows the last selected base preset even after editing. Every numerical song setting is estimated. The Radio Friendly Unit Shifter preset targets the song's intro; it was chosen by listening against the record over short-ring and flange alternatives. Put the plugin **before** your distortion or amp sim, as EHX advises for that song.
