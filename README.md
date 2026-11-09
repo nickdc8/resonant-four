@@ -11,6 +11,12 @@ This is a fan-made, independent project. It is **not affiliated with or endorsed
 
 ![Resonant Four editor](research/editor-preview.png)
 
+## Sound example
+
+[Listen to the RFUS sound example (MP3)](https://raw.githubusercontent.com/nickdc8/resonant-four/main/research/audio/rfus-sound-example.mp3)
+
+Hear the Radio Friendly Unit Shifter-inspired sound in action. Stereo MP3, 4:52, 320 kbps.
+
 
 ## Using the plugin
 
