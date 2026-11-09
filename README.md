@@ -2,7 +2,7 @@
 
 ### Chasing the opening guitar sound of Nirvana’s “Radio Friendly Unit Shifter”
 
-That metallic, resonant, moving guitar sound at the start of **“Radio Friendly Unit Shifter”** is instantly recognizable—and notoriously hard to find as a ready-to-use VST effect. **Resonant Four** is an independent JUCE VST3 built to explore that sound: an EchoFlanger-inspired effect with a dedicated, song-inspired RFUS starting preset, plus Flange, Chorus, Filter Matrix and Double Track modes.
+That metallic, resonant, moving guitar sound at the start of **“Radio Friendly Unit Shifter”** is instantly recognisable—and notoriously hard to find as a ready-to-use VST effect. **Resonant Four** is an independent JUCE VST3 built to explore that sound: an EchoFlanger-inspired effect with a dedicated, song-inspired RFUS starting preset, plus Flange, Chorus, Filter Matrix and Double Track modes.
 
 Load the preset, place the plugin **before distortion or an amp sim**, then shape the Rate, Width, Tune and Feedback to suit your guitar and setup. It’s a practical starting point for the sound, with room to push it into your own feedback and modulation tones.
 
