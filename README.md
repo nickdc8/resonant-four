@@ -36,6 +36,10 @@ Load **Resonant Four** as an audio effect in your DAW. Start with output at -6 d
 
 Mode changes briefly fade through dry and clear the old tail. Continuous controls are smoothed; delay changes intentionally produce pitch bends. Stereo channels have independent audio histories but share modulation phase. No compressor, amplifier or distortion pedal is included. Try external distortion after the plugin for the more extreme song-inspired sounds.
 
+## Download
+
+Prebuilt for macOS 12 or later, on Apple silicon and Intel. Get the zip from the [latest release](https://github.com/nickdc8/resonant-four/releases/latest). It contains the VST3 and the standalone app, and the release notes have the install steps.
+
 ## Build
 
 Requires CMake 3.22+, C++17, a supported JUCE toolchain and internet access for the initial JUCE 9.0.5 fetch. JUCE licensing applies separately; see its included licence before distributing commercial builds. The MIT licence here covers this project's code, not JUCE. Third-party reference materials are linked in the research notes and are not included.
